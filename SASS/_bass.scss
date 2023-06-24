@@ -1,0 +1,42 @@
+//color
+$color-cyan: #22ACE2;
+$color-yellow: #F4EC27;
+$color-magenta: #EA098D;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-shade: #AEAEAE;
+//fonts
+$font-primary: poppins;
+$font-secondary: "times new roman";
+// font weights
+$font-weight-light: 100;
+$font-weight-thin: 300;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-bolder: 900;
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    line-height: 1.2;
+    font-family: $font-primary, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 136.4rem;
+    margin: 0 auto;
+}

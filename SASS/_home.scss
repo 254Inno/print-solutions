@@ -1,0 +1,22 @@
+.nav{
+    height: 18rem;
+    overflow-y: hidden;
+    background-color: $color-white;
+    &__top{
+
+        .container{
+        height: 8.5rem;
+        display: flex;
+        justify-content: space-around;
+        background-color: bisque;
+        color: red;
+
+    }
+    &--link{
+        display: flex;
+        justify-content: space-around;
+    }
+    &--quote{
+        //margin-left: auto;
+    }
+}}
