@@ -1,0 +1,48 @@
+.container{
+    max-width: 136.4rem;
+    margin: 0 auto;
+    @media (max-width: 136.4rem){
+
+        padding: 0 4rem;
+        margin: 0 auto;
+
+    }
+}
+.link{
+    text-decoration: none;
+    display: inline-block;
+}
+.product-heading{
+    font-size: 2.8rem;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+.product-btn{
+    font-size: 1.4rem;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    text-transform: capitalize;
+    padding: 0.8rem;
+    border: none;
+    background-color: $color-magenta;
+    border-radius: .7rem;
+    margin-bottom: 1rem;
+
+}
+
+.h2{
+    font-size: 4.5rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    padding-left: 3rem;
+    margin-bottom: 5rem;
+    span{
+        display: block;
+        height: 1.2rem;
+        width: 16rem;
+        background-color: $color-yellow;
+        margin-top: 0.5rem;
+    }
+}
