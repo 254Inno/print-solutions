@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Bring your designs to life. Print solution lets you design and print products to be delivered to your door. It's planet-friendly printing, all in one place.">
+    <meta name="keywords" content="Printing Services in Kenya, Printing services in Kisii, Roll-up Banners, Stickers, Business Cards, Flyers, Funeral programmes,banners, t-shirts printing,branding,designing, house plan printing in kisii.">
+    <meta name="author" content="Innocent Nyakangi">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,35 +16,48 @@
 </head>
 
 <body>
+
+
+        <!--------------------------------------------------------------------------Navigation ----------------------------------------------------------->
+
+
     <div class="nav">
         <div class="nav__top">
             <div class="container">
-                <img src="IMG/logo.png" alt="print solution logo" class="logo">
+                <a href="index.html">
+                    <img src="IMG/logo.png" alt="print solution logo" class="logo">
+                </a>
                 <div class="nav__top--link">
                     <div class="info">
                         <svg class="nav-icons">
-                            <use xlink:href="img/sprite.svg#phone"></use>
+                            <use xlink:href="sprite.svg#phone"></use>
                         </svg>
                         <div class="text">
-                            <h2 class="h2">
-                                +25475565027
-                            </h2>
-                            <p class="para1-nav">
-                                Call for any questions
-                            </p>
+                            <a class="link" href="tel:+254725565027" target="_blank">
+                                <h2 class="h2">
+                                    +254 725 565027
+                                </h2>
+                                <p class="para1-nav">
+                                    Call for any questions
+                                </p>
+                            </a>
+                            
                         </div>
                     </div>
                     <div class="info">
                         <svg class="nav-icons">
-                            <use xlink:href="img/sprite.svg#envelope"></use>
+                            <use xlink:href="sprite.svg#envelope"></use>
                         </svg>
                         <div class="text">
-                            <h2 class="h2">
-                                Send us an email
-                            </h2>
-                            <p class="para1-nav">
-                                Sales inquiry
-                            </p>
+                            <a class="link" href="mailto: printsolutions@gmail.com" target="_blank">
+                                <h2 class="h2">
+                                    Send us an email
+                                </h2>
+                                <p class="para1-nav">
+                                    Sales inquiry
+                                </p>
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -53,23 +69,31 @@
         <div class="nav__bottom">
             <div class="container">
                 <a href="index.html" class="nav__bottom-links link">
-                      <span>Home</span>
-                    </a>
-                <a href="#" class="nav__bottom-links link">
-                       <span>About Us</span> 
-                    </a>
+                    <span>Home</span>
+                </a>
+                <a href="#about_us" class="nav__bottom-links link">
+                    <span>About Us</span> 
+                </a>
                 <a href="services.html" class="nav__bottom-links link">
-                       <span>Services</span> 
-                    </a>
+                    <span>Services</span> 
+                </a>
                 <a href="products.html" class="nav__bottom-links link">
-                       <span>Products</span> 
-                    </a>
-                <a href="#" class="nav__bottom-links link">
+                    <span>Products</span> 
+                </a>
+                <a href="#contact" class="nav__bottom-links link">
                         <span>Contact us</span>
                     </a>
             </div>
         </div>
     </div>
+
+
+
+    <!-------------------------------------------------------------------------Hero section------------------------------------------------------>
+
+
+
+
     <div class="hero">
         <div class="container">
             <div class="hero__text">
@@ -80,8 +104,10 @@
                 <p class="hero__text--para">
                     We take quality seriously, from the first phone call to the premium paper to the well-protected packaging that arrives on your door. You can rest assured that when you work with Printing solutions you are getting the best printing for your money.
                 </p>
-                <button class="hero__text--btn">
-                    Talk to us
+                <button class="hero__text--btn" >
+                    <a href="#cat" class="link">
+                        Talk to us
+                    </a>
                 </button>
             </div>
             <div class="hero__image">
@@ -89,6 +115,13 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-------------------------------------------------------------------------------Top products----------------------------------------------------->
+
+
+
     <div class="top-prod">
         <div class="container">
             <h2 class="top-prod__h2 h2">
@@ -109,7 +142,7 @@
                 <li class="top-prod__products--product">
                     <img src="IMG/top-product-2.png" alt="large blue billboard of a lady" class="product-image">
                     <h3 class="product-heading">
-                       Sticker
+                    Sticker
                     </h3>
                     <button class="product-btn">
                         View product
@@ -136,7 +169,14 @@
             </ul>
         </div>
     </div>
-    <div class="why">
+    
+
+
+    <!-------------------------------------------------------------------------------About us----------------------------------------------------->
+
+
+    
+    <div class="why" id="about_us">
         <div class="container">
             <h2 class="why__h2 h2">
                 Why choose us?
@@ -153,7 +193,14 @@
             </div>
         </div>
     </div>
-    <div class="cat">
+
+
+
+    <!-----------------------------------------------------Call to action------------------------->
+
+
+
+    <div class="cat" id="cat">
         <div class="container">
             <h2 class="cat__h2 h2">
                 NEED HELP IN YOUR BRANDING LET'S CONNECT
@@ -162,68 +209,116 @@
 
         <ul class="cat__icons">
             <li class="cat__icons--icon">
-                <svg class="cat-icons">
-                    <use xlink:href="img/sprite.svg#facebook"></use>
-                </svg>
+                <a href="https://web.facebook.com/profile.php?id=100080473235685" class="link" target="_blank">
+                    <svg class="cat-icons">
+                        <use xlink:href="sprite.svg#facebook"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="cat__icons--icon" >
+                <a href="#contact" class="link">
+                    <svg class="cat-icons" >
+                        <use xlink:href="sprite.svg#envelope"></use>
+                    </svg>
+                </a>
             </li>
             <li class="cat__icons--icon">
-                <svg class="cat-icons">
-                    <use xlink:href="img/sprite.svg#envelope"></use>
-                </svg>
-            </li><li class="cat__icons--icon">
-                <svg class="cat-icons">
-                    <use xlink:href="img/sprite.svg#instagram"></use>
-                </svg>
-            </li><li class="cat__icons--icon">
-                <svg class="cat-icons">
-                    <use xlink:href="img/sprite.svg#location"></use>
-                </svg>
-            </li><li class="cat__icons--icon">
-                <svg class="cat-icons">
-                    <use xlink:href="img/sprite.svg#whatsapp"></use>
-                </svg>
-            </li><li class="cat__icons--icon">
-                <svg class="cat-icons">
-                    <use xlink:href="img/sprite.svg#phone"></use>
-                </svg>
+                <a href="https://www.instagram.com/mimi_mwafrika/" class="link" target="_blank">
+                    <svg class="cat-icons">
+                        <use xlink:href="sprite.svg#instagram"></use>
+                    </svg>
+                </a>
             </li>
-        </li><li class="cat__icons--icon">
+            <li class="cat__icons--icon">
+                <a href="#map" class="link">
+                    <svg class="cat-icons">
+                        <use xlink:href="sprite.svg#location"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="cat__icons--icon">
+                <a href="https://wa.me/+254725565027?text=I'm%20interested%20in%20your%20printing%20services" class="link" target="_blank">
+                    <svg class="cat-icons">
+                        <use xlink:href="sprite.svg#whatsapp"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="cat__icons--icon">
+                <a class="link" href="tel:+254725565027" target="_blank">
+                    <svg class="cat-icons">
+                        <use xlink:href="sprite.svg#phone"></use>
+                    </svg>
+                </a>
+            </li>
+        </li>
+        <li class="cat__icons--icon">
             <svg class="cat-icons">
-                <use xlink:href="img/sprite.svg#tiktok"></use>
+                <use xlink:href="sprite.svg#tiktok"></use>
             </svg>
         </li>
         </ul>
     </div>
     </div>
+
+
+
+
+    <!----------------------------------------------------------Customer reviews------------------------------------------------------->
+
+
+
+
     <div class="review">
         <div class="container">
-             <h2 class="review__h2 h2">
+            <h2 class="review__h2 h2">
                 HEAR FROM OUR CLIENTS
                 <span></span>
             </h2>
-            <img src="IMG/profile.jpg" alt="profile of a young casual man" class="review__image">
+            <img src="IMG/team1.jpg" alt="profile of a young casual man" class="review__image">
             <p class="review__msg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat justo ac facilisis porttitor. Sed a lectus eu urna aliquam venenatis. Sed feugiat elementum dui aliquam blandit. Donec id massa justo. Vestibulum semper lorem vel tortor facilisis dictum. Integer ut dolor vulputate, accumsan dolor sed, laoreet justo. 
+                I recently discovered print solutions while searching for a roll up banner. Not only
+                did they have the item I was looking for, but their selection was vast, and the prices
+                were competitive. The website was easy to navigate, and the product descriptions
+                were informative and accurate. I was pleasantly surprised by the fast shipping and
+                the care they took in packaging my order. I'm thrilled with my purchase and will
+                continue to print with print solutions for all my printing needs. 
             </p>
             <p class="review__name">
                 Odhiambo Gwandoya
                 <p class="review__name--title">
-                    Director, Rains Company
+                    Customer, Homabay
                 </p>
             </p>
             <div class="review__control">
                 <svg class="review__control--icon">
-                    <use xlink:href="img/sprite.svg#left"></use>
+                    <use xlink:href="sprite.svg#left"></use>
                 </svg>
                 <svg class="review__control--icon">
-                    <use xlink:href="img/sprite.svg#right"></use>
+                    <use xlink:href="sprite.svg#right"></use>
                 </svg>
             </div>
         </div>
     </div>
-    <div class="map">
+
+
+
+    <!----------------------------------------------------------------Map------------------------------------------------------------------------------------>
+
+
+
+
+    <div class="map" id="map">
         <img src="IMG/MAP.png" alt="print solution location map" class="map__image">
     </div>
+
+
+
+
+    <!--------------------------------------------------------------------------footer ----------------------------------------------------------->
+
+
+
+
     <div class="footer">
         <div class="container">
             <div class="footer__contact">
@@ -233,24 +328,32 @@
                 </p>
                 <ul class="footer__contact--icons">
                     <li class="list-item">
-                        <svg class="cat-icons">
-                         <use xlink:href="img/sprite.svg#facebook-f"></use>
-                        </svg>
+                        <a href="https://web.facebook.com/profile.php?id=100080473235685" class="link" target="_blank">
+                            <svg class="cat-icons">
+                                <use xlink:href="sprite.svg#facebook-f"></use>
+                            </svg>
+                        </a>
                     </li>
                     <li class="list-item">
-                        <svg class="cat-icons">
-                         <use xlink:href="img/sprite.svg#instagram"></use>
-                        </svg>
+                        <a href="https://www.instagram.com/mimi_mwafrika/" class="link" target="_blank">
+                            <svg class="cat-icons">
+                                <use xlink:href="sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
                     </li>
                     <li class="list-item">
-                        <svg class="cat-icons">
-                         <use xlink:href="img/sprite.svg#whatsapp"></use>
-                        </svg>
+                        <a href="https://wa.me/+254725565027?text=I'm%20interested%20in%20your%20printing%20services" class="link" target="_blank">
+                            <svg class="cat-icons">
+                                <use xlink:href="sprite.svg#whatsapp"></use>
+                            </svg>
+                        </a>
                     </li>
                     <li class="list-item">
-                        <svg class="cat-icons">
-                         <use xlink:href="img/sprite.svg#phone"></use>
-                        </svg>
+                        <a class="link" href="tel:+254725565027" target="_blank">
+                            <svg class="cat-icons">
+                                <use xlink:href="sprite.svg#phone"></use>
+                            </svg>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -284,46 +387,44 @@
             </div>
             <div class="footer__product">
                 <div class="footer__product--head">
-                   Products
+                Products
                 </div>
                 <ul class="footer__product--links">
                     <li class="footer-link">
-                        <a href="product.html" class="link"> Banners, Sticker etc</a>
+                        <a href="products.html" class="link"> Banners, Sticker etc</a>
                     </li>
                     <li class="footer-link">
-                        <a href="product.html" class="link">House plans</a>
+                        <a href="products.html" class="link">House plans</a>
                     </li>
                     <li class="footer-link">
-                        <a href="product.html" class="link">Posters,Flayers Eulogy etc</a>
+                        <a href="products.html" class="link">Posters,Flayers Eulogy etc</a>
                     </li>
                     <li class="footer-link">
-                        <a href="product.html" class="link">Business cards</a>
+                        <a href="products.html" class="link">Business cards</a>
                     </li>
                     <li class="footer-link">
-                        <a href="product.html" class="link">Roll ups, Tear drops etc</a>
+                        <a href="products.html" class="link">Roll ups, Tear drops etc</a>
                     </li>
                     <li class="footer-link">
-                        <a href="product.html" class="link">Wallpapers</a>
+                        <a href="products.html" class="link">Wallpapers</a>
                     </li>
                     <li class="footer-link">
-                        <a href="product.html" class="link">T-shirts, Shirts, Cups etc</a>
+                        <a href="products.html" class="link">T-shirts, Shirts, Cups etc</a>
                     </li>
                 </ul>
             </div>
-            <div class="footer__msg">
+            <div class="footer__msg" id="contact">
                 <div class="footer__msg--head">
                     Message us
-                 </div>
-                 <form action="#">
+                </div>
+                <form action="#">
                     <input type="text" placeholder="Your name" class="footer__msg--name">
                     <input type="email" placeholder="Your email"  class="footer__msg--email">
                     <input type="textarea" placeholder="Your message"  class="footer__msg--msg">
                     <input type="button" value="send" class="footer__msg--btn">
-                   <!---- <button class="footer__msg--btn">Send -->
+                <!---- <button class="footer__msg--btn">Send -->
                     </button>
-                 </form>
-
-                
+                </form>   
             </div>
         </div>
         <div class="footer__copy">
@@ -334,6 +435,57 @@
             </div>
         </div>
     </div>
+
+    <!--------------------------------------quote generator------------------------->
+
+    <div class="quote-gen hide-checkbox">
+        <div class="quote-gen__container">
+        <div class="quote-gen__close">
+            <svg class="quote-gen__close--icon">
+                <use xlink:href="sprite.svg#circle-x"></use>
+            </svg>
+        </div>
+        <header class="quote-gen__head">
+            Quote generator
+
+            <span></span>
+        </header>
+
+        <div class="quote-gen__input--dropdown">
+            <select class="select" name="material" id="material">
+                <option value="Banner" selected>Banner</option>
+                <option value="Sticker">Sticker</option>
+                <option value="WindowGraphics" >Window graphics</option>
+                <option value="ReflectiveSticker">Reflective sticker</option>
+                <option value="ReflectiveBanner" >Reflective banner</option>
+                <option value="Satin" >Satin</option>
+                <option value="No cut" disabled >No cut</option>
+                <option value="clearSticker" disabled >Clear Sticker</option>
+            </select>
+        </div>
+        <div class="quote-gen__input--measurement">
+            <input type="number" placeholder="Width in meters" class="quote-gen__input--width" required>
+            <input type="number" placeholder="Hight in meters" class="quote-gen__input--height" required>
+        </div>
+        <div class="quote-gen__input-checkbox">
+            <label class="quote-gen__input--checkbox">Tick if not designed
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <!-- <input type="checkbox" class="quote-gen__input">
+                <p class="quote-gen__input--checkbox-text">Tick if not designed</p> -->
+            </div>
+        <div class="quote-gen__input--btn quote-btn">
+            <input type="button" class="quote-gen__input-btn quote-btn btn" value="Generate">
+        </div>
+
+        <div class="quote-gen__total">
+            Total <span class="total-value">Ksh. 0.00</span>
+        </div>
+    </div>
+
+    </div>
+    <script src="JS/script.js"></script>
 </body>
 
 </html>

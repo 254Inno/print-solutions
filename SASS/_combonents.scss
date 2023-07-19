@@ -1,7 +1,7 @@
 .container{
-    max-width: 136.4rem;
+    max-width: 136.6rem;
     margin: 0 auto;
-    @media (max-width: 136.4rem){
+    @media (max-width: 136.6rem){
 
         padding: 0 4rem;
         margin: 0 auto;
@@ -12,14 +12,14 @@
     text-decoration: none;
     display: inline-block;
 }
-.product-heading{
+.product-heading, .service-heading{
     font-size: 2.8rem;
     font-weight: $font-weight-bold;
     color: $color-white;
     text-transform: capitalize;
     margin: 1rem 0;
 }
-.product-btn{
+.product-btn, .service-btn{
     font-size: 1.4rem;
     font-weight: $font-weight-bold;
     color: $color-white;
@@ -46,3 +46,235 @@
         margin-top: 0.5rem;
     }
 }
+
+///---------------------------Quote generator--------------------------///
+
+.quote-gen{
+    background-color: $color-shade-transi;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    @include displayFlex;
+    backdrop-filter: blur(10px);
+
+    &__container{
+        padding: 2rem;
+        background-color: $color-cyan;
+        border-radius: 1rem;
+        width: 80rem;
+        
+       // position: absolute;
+    }
+
+    &__close{
+        width: 6rem;
+        height: 6rem;
+        position: relative;
+        margin-left: auto;
+        
+       // background-color: red;
+        @include displayFlex;
+
+        &--icon{
+            fill: $color-yellow;
+            height: 4rem;
+            width:4rem;
+            &:hover{
+                fill: $color-magenta;
+                cursor: pointer;
+                transition: all .7s linear;
+            }
+        }
+
+    }
+
+    &__head{
+        color: $color-white;
+        font-size: 4.8rem;
+        font-weight: $font-weight-bold;
+        //text-align: center;
+        margin-bottom: 3rem;
+        @include displayFlex;
+        flex-direction: column;
+
+        span{
+            display: block;
+            display: inline-block;
+            height: 1rem;
+            width: 2.34rem;
+            background-color: $color-yellow;
+        }
+    }
+
+    &__input{
+       // margin-bottom: 2rem;
+        &--dropdown{
+            margin-bottom: 2rem;
+            @include displayFlex;
+
+            .select{
+                width: 30rem;
+                height: 4rem;
+                border-radius: 2rem;
+                padding: .5rem;
+                border: .2rem solid $color-magenta;
+                outline: none;
+                font-size: 1.8rem;
+
+            }
+        }
+        &--measurement{
+            @include displayFlex;
+            gap: 5rem;
+            margin-bottom: 4rem;
+
+            input{
+                width: 30rem;
+                height: 4rem;
+                border-radius: 5rem;
+                padding-left: 1rem;
+                border: .2rem solid $color-magenta;
+                outline: none;
+                font-size: 1.8rem;
+            }
+        }
+        &-checkbox{
+            @include displayFlex;
+            gap: 2rem;
+            margin-bottom: 4rem;
+
+            // input[type=checkbox] {
+            //     //visibility: hidden;
+            //     width: 4rem;
+            //     height: 4rem;
+            //     border-radius: 5rem;
+            //     padding-left: 1rem;
+            //     border: .2rem solid $color-magenta;
+            //     outline: none;
+            //     font-size: 1.8rem;
+            // }
+            // p{
+            //     color: $color-white;
+            //     font-size: 2rem;
+                
+            // }
+            
+        }
+        &--btn{
+
+            @include displayFlex;
+
+            .btn{
+            background-color: $color-magenta;
+            border: none;
+            padding: 1rem 2.9rem;
+            font-size: 2.8rem;
+            font-weight: $font-weight-bold;
+            color: $color-white;
+            //text-transform: uppercase;
+            border-radius: 8rem;
+            cursor: pointer;
+            margin-bottom: 4rem;
+
+                &:hover{
+                    @include hover;
+                }
+            }
+        }
+    }
+    &__total{
+        @include displayFlex;
+        font-size: 2.8rem;
+        font-weight: $font-weight-bold;
+        color: $color-white;
+        margin-bottom: 6rem;
+        gap: 1rem;
+
+        span{
+            @include displayFlex;
+            background-color: $color-white;
+            padding: 1rem;
+            //height: 4rem;
+            border: .2rem solid $color-magenta;
+            border-radius: 1rem;
+            color: $color-black;
+        }
+        }
+}
+
+
+///----------------check bos custom
+
+.quote-gen__input--checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: $color-white;
+}  
+  /* Hide the browser's default checkbox */
+.quote-gen__input--checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 2px solid $color-magenta;
+    border-radius: .7rem;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .quote-gen__input--checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .quote-gen__input--checkbox input:checked ~ .checkmark {
+    background-color: $color-yellow;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .quote-gen__input--checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .quote-gen__input--checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid $color-magenta;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .hide-checkbox{
+    display: none;
+  }

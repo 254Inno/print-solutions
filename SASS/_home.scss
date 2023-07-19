@@ -158,6 +158,14 @@
             &:hover{
                 @include hover;
             }
+
+            a{
+                color: $color-white;
+
+                &:hover{
+                    color: $color-magenta;
+                }
+            }
         }
     }
     &__image{

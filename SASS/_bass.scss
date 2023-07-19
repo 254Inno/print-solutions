@@ -1,3 +1,11 @@
+//////////////////////desktop
+//big screen 1920 x 1080
+//med screen 1366 x 768
+//small screen 1280 x 800
+
+////////phones
+///  
+
 //color
 $color-cyan: #22ACE2;
 $color-yellow: #F4EC27;
@@ -8,6 +16,7 @@ $color-black: #000000;
 $color-black-shade: #2E2E2E;
 $color-white: #ffffff;
 $color-shade: #AEAEAE;
+$color-shade-transi: #181717b7;
 //fonts
 $font-primary: poppins;
 $font-secondary: "times new roman";
@@ -17,6 +26,7 @@ $font-weight-thin: 300;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 $font-weight-bolder: 900;
+
 html,
 body {
     width: 100%;
@@ -25,8 +35,13 @@ body {
     padding: 0;
 }
 
+
 html {
     font-size: 62.5%;
+    
+    @media screen and (max-width: 1200px) {
+        font-size: 50%;
+      }
 }
 
 body {
@@ -39,6 +54,7 @@ body {
 *::before {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 //mixans
@@ -69,4 +85,9 @@ body {
         text-decoration: underline;
         transition: all 0.9s;
     }
+}
+@mixin displayFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
