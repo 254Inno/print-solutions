@@ -1,3 +1,5 @@
+///----------------------navigation---------------------------------------
+
 .nav{
     height: 18rem;
     overflow-y: hidden;
@@ -16,17 +18,60 @@
         .logo{
             display: inline-block;
             height: 8rem;
-            width: 15.9rem;
+            //width: 15.9rem;
+
+            @media screen and (max-width: 330px ) {
+                max-width: 10rem;
+                height: auto;
+                
+            }
         }
 
     }
     &--link{
         display: flex;
-        //align-items: center;
+        gap: 5rem;
         justify-content: space-around;
         .info{
             display: flex;
-            margin-left: 5rem;
+
+            @media screen and (max-width: 820px) {
+                display: none;
+            }
+
+            &-mobile{
+
+                display: none;
+
+                @media screen and (max-width: 820px) {
+                    display: flex;
+                }
+
+                @media screen and (max-width: 530px) {
+                    display: none;
+                }
+                
+
+                .nav-icons{
+                    height: 4rem;
+                    width: 4em;
+                    fill: $color-cyan;
+                    margin-right: 2rem;
+                }
+                .h2{
+                    font-size: 2.2rem;
+                    font-weight: $font-weight-bold;
+                    color: $color-magenta;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    margin: 0;
+                    padding: 0;
+                }
+                .para1-nav{
+                    font-size: 1.6rem;
+                    color: $color-shade;
+                }
+            }
             
             .nav-icons{
                 height: 4rem;
@@ -59,12 +104,21 @@
         border-radius: 4rem;
         cursor: pointer;
 
+        @media screen and (max-width: 820px) {
+            padding: 1rem 1.5rem;
+            font-size: 1.8rem;  
+        }
+        @media screen and (max-width: 330px) {
+            padding: 1rem 1rem;
+            font-size: 1.2rem;  
+        }
+
         &:hover{
             @include hover;
         }
         //margin-left: auto;
     }
-}
+    }
 &__bottom{
     background-color: $color-magenta;
     height: 8.5rem;
@@ -73,9 +127,13 @@
 
     .container{
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include displayFlex
+
+        @media screen and (max-width: 635px) {
+
+            display: none;
+            
+        }
 
         
     }
@@ -89,9 +147,13 @@
         display: inline-block;
         height: 100%;
 
-        &:first-child{
-           @include hover;
+        @media screen and (max-width: 800px) {
+
+            font-size: 2.2rem;
+            padding: 0rem 1.5rem;
+            
         }
+        
 
         &:hover{
             @include hover;
@@ -107,11 +169,97 @@
         }
 
     }
+
+    
 }
 
+&__mobile{
+    display: none;
+
+    @media screen and (max-width: 635px) {
+        height: 100%;
+        @include displayFlex;
+        width: 100%;
+        
+    }
+    
+    
+
+    &--icons{   
+        @include displayFlex;
+        gap: 1rem;
+        width: 100%;
+        padding: 0rem 5rem;
+        z-index: 7;
+
+        .mobile-icons{
+            height: 4rem;
+            width: 4rem;
+            fill: $color-white;
+
+            &:hover{
+                fill: $color-yellow;
+                scale: 120%;
+                transition: all .5s linear;
+            }
+
+            &:first-child{
+                margin-right: auto;
+                cursor: pointer;
+            }
+        }
+    }
+    &--links{
+            @include displayFlex;
+            flex-direction: column;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            background-color: $color-magenta; 
+        
+        &-link{
+            //position: absolute;
+            @include displayFlex;
+            text-decoration: none;
+            color: $color-white;
+            font-size: 2.2rem;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            padding: 2rem;
+            width: 100%;
+            color: $color-cyan;
+            //position: absolute;
+
+            
+
+            
+            span{
+                @include displayFlex;
+                width: 100%;
+                padding: 2rem;
+                &:hover{
+                    background-color: $color-white;
+                    color: $color-magenta;
+                    height: 100%;
+                    width: 100%;
+                    transition: all .7s linear;
+                }
+    
+            }
+        }
+        
+    }
+
 }
+}
+
+
+
 .hero{
-    height: calc(100vh - 18rem);
+    //height: calc(100vh - 18rem);
     overflow: hidden;
     //background-color: green;
     .container{
@@ -120,6 +268,13 @@
         grid-gap: 1.6rem;
         padding-top: 8.4rem;
         margin-bottom: 2rem;
+
+        @media screen and (max-width: 700px) {
+            @include displayFlex;
+            flex-direction: column-reverse;
+          }
+
+        
     }
 
     &__text{
@@ -127,6 +282,16 @@
             font-size: 6rem;
             font-weight: $font-weight-bolder;
             color: $color-cyan;
+            
+
+            @media screen and (max-width: 950px) {
+                font-size: 5rem;
+            }
+
+            @media screen and (max-width: 700px) {
+                font-size: 4.2rem;
+            }
+ 
 
             span{
                 display: block;
@@ -141,6 +306,9 @@
             margin-top: 4.8rem;
             font-size: 2.4rem;
             font-weight: $font-weight-medium;
+
+            
+            
         }
 
         &--btn{
@@ -173,6 +341,14 @@
             margin-top: -6rem;
             //max-height: calc(100% - 2rem);
             width: 100%;
+
+            @media screen and (max-width: 790px) {
+            margin-top: 6rem;
+          }
+
+          @media screen and (max-width: 700px) {
+            margin-top: -6rem;
+          }
         }
     }
         
@@ -196,9 +372,9 @@
         list-style-type: none;
         display: grid;
         justify-items: center;
-        grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
-        //gap: 1.6rem
-        margin: .8rem;
+        grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+        margin: 0.25rem;
+       
 
         &--product{
             align-self: center;
@@ -214,16 +390,39 @@
     .container{
         display: grid;
         grid-template-columns: repeat(12,1fr);
+
+        @media screen and (max-width: 700px) {
+            grid-template-rows: 6rem, 1fr, 1fr;
+          }
+
+
+        
     }
     &__h2{
+        text-align: center;
         color: $color-black;
         grid-column: 1/13;
+        @media screen and (max-width: 700px) {
+            grid-row: 1/2;
+          }
         
     }
     &__text{
         grid-column: 1/7;
         font-size: 2rem;
         font-weight: $font-weight-medium;
+        text-align: justify;
+
+        @media screen and (max-width: 700px) {
+            grid-column: 1/13;
+            grid-row: 3/4;
+          }
+
+        &::first-letter{
+            font-size : 4.8rem;
+            color: $color-magenta;
+            font-weight: $font-weight-bold;
+         }
         span{
             display: block;
             height: 1.2rem;
@@ -236,6 +435,11 @@
     &__image{
         grid-column: 8/13;
         margin-top: -2rem;
+
+        @media screen and (max-width: 700px) {
+            grid-column: 1/13;
+            grid-row: 2/3;
+          }
         &--img{
             width: 100%;
         }
@@ -251,6 +455,12 @@
         width: 60%;
         margin: 0 auto;
         color: $color-white;
+
+        @media screen and (max-width: 950px) {
+            font-size: 1.6rem;
+            width: 95%;
+            padding-left: 0;
+        }
     }
     &__icons{
         list-style-type: none;
@@ -258,11 +468,19 @@
         grid-template-columns: repeat(auto-fill, minmax(18rem,1fr));
         justify-items: center;
 
+        @media screen and (max-width: 600px) {
+            grid-template-columns: repeat(auto-fill, minmax(10rem,1fr));
+        }
+
         .cat-icons{
             fill: $color-yellow;
             height: 10rem;
             width: 10rem;
             margin: 2rem;
+            @media screen and (max-width: 600px) {
+                height: 7rem;
+                width: 7rem;
+            }
             //margin-bottom: 5rem;
             &:hover{
                 cursor: pointer;
@@ -283,6 +501,7 @@
         flex-direction: column;
         align-items: center;
         position: relative;
+        
 
     }
     &__h2{
@@ -290,6 +509,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        text-align: center;
     }
     &__image{
         width: 15.4rem;
@@ -304,6 +525,13 @@
         font-weight: $font-weight-medium;
         text-align: center;
         width: 80%;
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 500px) {
+            text-align: justify;
+        }
 
     }
     &__name{
@@ -330,11 +558,16 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+
+        @media screen and (max-width: 700px) {
+            transform: translateY(-180%);
+          }
         &--icon {
             fill: $color-yellow-shade;
-            height: 10rem;
-            width: 10rem;
+            height: 7rem;
+            width: 7rem;
             margin: 0 2rem;
+            
             &:hover{
                 fill: $color-magenta-shade;
                 scale: 105%;
@@ -360,6 +593,11 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
         justify-items: center;
+        align-items: center;
+
+        & > *{
+            margin-bottom: 5rem;
+        }
     }
 
     &__contact{

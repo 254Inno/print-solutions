@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="description" content="Bring your designs to life. Print solution lets you design and print products to be delivered to your door. It's planet-friendly printing, all in one place.">
     <meta name="keywords" content="Printing Services in Kenya, Printing services in Kisii, Roll-up Banners, Stickers, Business Cards, Flyers, Funeral programmes,banners, t-shirts printing,branding,designing, house plan printing in kisii.">
-    <meta name="author" content="Innocent Nyakangi">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="shortcut icon" type="image/png" href="IMG/favicon.ico" />
-    <title>Print Solutions</title>
+    <title>Print Solutions Kisii</title>
 </head>
 
 <body>
@@ -28,6 +27,22 @@
                     <img src="IMG/logo.png" alt="print solution logo" class="logo">
                 </a>
                 <div class="nav__top--link">
+                    <div class="info-mobile">
+                        <svg class="nav-icons">
+                            <use xlink:href="sprite.svg#phone"></use>
+                        </svg>
+                        <div class="text">
+                            <a class="link" href="tel:+254725565027" target="_blank">
+                                <h2 class="h2">
+                                    +254 725 565027
+                                </h2>
+                                <p class="para1-nav">
+                                    Call for any questions
+                                </p>
+                            </a>
+                            
+                        </div>
+                    </div>
                     <div class="info">
                         <svg class="nav-icons">
                             <use xlink:href="sprite.svg#phone"></use>
@@ -49,7 +64,7 @@
                             <use xlink:href="sprite.svg#envelope"></use>
                         </svg>
                         <div class="text">
-                            <a class="link" href="mailto: printsolutions@gmail.com" target="_blank">
+                            <a class="link" href="mailto: printslogistic@gmail.com" target="_blank">
                                 <h2 class="h2">
                                     Send us an email
                                 </h2>
@@ -61,6 +76,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="nav__top--quote">
                     Get a quote
                 </div>
@@ -84,8 +100,49 @@
                         <span>Contact us</span>
                     </a>
             </div>
+
+            <div class="nav__mobile">
+                <div class="nav__mobile--icons">
+                    <svg class="mobile-icons mobileBars">
+                        <use xlink:href="sprite.svg#bars"></use>
+                    </svg>
+                    <a href="https://web.facebook.com/profile.php?id=100080473235685" class="link" target="_blank">
+                        <svg class="mobile-icons">
+                            <use xlink:href="sprite.svg#facebook-f"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/mimi_mwafrika/" class="link" target="_blank">
+                        <svg class="mobile-icons">
+                            <use xlink:href="sprite.svg#instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/+254725565027?text=I'm%20interested%20in%20your%20printing%20services" class="link" target="_blank">
+                        <svg class="mobile-icons">
+                            <use xlink:href="sprite.svg#whatsapp"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="nav__mobile--links hide">
+                        <a href="index.html" class="nav__mobile--links-link">
+                            <span>Home</span>
+                        </a>
+                        <a href="index.html#about_us" class="nav__mobile--links-link">
+                            <span>About Us</span> 
+                        </a>
+                        <a href="services.html" class="nav__mobile--links-link">
+                            <span>Services</span> 
+                        </a>
+                        <a href="products.html" class="nav__mobile--links-link">
+                            <span>Products</span> 
+                        </a>
+                        <a href="#contact" class="nav__mobile--links-link">
+                                <span>Contact us</span>
+                            </a>
+                </div>
+            </div>
         </div>
     </div>
+
    
 
 
@@ -447,53 +504,6 @@
 
     <!--------------------------------------quote generator------------------------->
 
-    <div class="quote-gen hide-checkbox">
-        <div class="quote-gen__container">
-        <div class="quote-gen__close">
-            <svg class="quote-gen__close--icon">
-                <use xlink:href="sprite.svg#circle-x"></use>
-            </svg>
-        </div>
-        <header class="quote-gen__head">
-            Quote generator
-
-            <span></span>
-        </header>
-
-        <div class="quote-gen__input--dropdown">
-            <select class="select" name="material" id="material">
-                <option value="Banner" selected>Banner</option>
-                <option value="Sticker">Sticker</option>
-                <option value="WindowGraphics" >Window graphics</option>
-                <option value="ReflectiveSticker">Reflective sticker</option>
-                <option value="ReflectiveBanner" >Reflective banner</option>
-                <option value="Satin" >Satin</option>
-                <option value="No cut" disabled >No cut</option>
-                <option value="clearSticker" disabled >Clear Sticker</option>
-            </select>
-        </div>
-        <div class="quote-gen__input--measurement">
-            <input type="number" placeholder="Width in meters" class="quote-gen__input--width" required>
-            <input type="number" placeholder="Hight in meters" class="quote-gen__input--height" required>
-        </div>
-        <div class="quote-gen__input-checkbox">
-            <label class="quote-gen__input--checkbox">Tick if not designed
-                <input type="checkbox" class="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <!-- <input type="checkbox" class="quote-gen__input">
-                <p class="quote-gen__input--checkbox-text">Tick if not designed</p> -->
-            </div>
-        <div class="quote-gen__input--btn quote-btn">
-            <input type="button" class="quote-gen__input-btn quote-btn btn" value="Generate">
-        </div>
-
-        <div class="quote-gen__total">
-            Total <span class="total-value">Ksh. 0.00</span>
-        </div>
-    </div>
-
-    </div>
     <script src="JS/script.js"></script>
 </body>
 

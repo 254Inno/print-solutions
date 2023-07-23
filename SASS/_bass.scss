@@ -62,7 +62,6 @@ body {
 @mixin hover{
     background-color: $color-yellow;
     color: $color-cyan;
-    scale: 110%;
     transition: all 1s;
 }
 @mixin footer__head{
