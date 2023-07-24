@@ -435,7 +435,8 @@ body {
 
 .map__image {
   width: 100%;
-  min-height: 56.6rem; }
+  min-height: 56.6rem;
+  object-fit: cover; }
 
 .footer {
   padding-top: 8rem;
