@@ -132,3 +132,98 @@ mobileBars.addEventListener('click', () => {
 mobileLinks.addEventListener('click', () => {
    mobileLinks.classList.toggle('hide')
 })
+
+/// map 
+var map = L.map('map').setView([-0.6780722822264619, 34.77280655443099], 19);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+   maxZoom: 19,
+   attribution: '© OpenStreetMap'
+}).addTo(map);
+
+var marker = L.marker([-0.6780722822264619, 34.77280655443099]).addTo(map);
+
+
+marker.bindPopup("Kisii printers solution").openPopup();
+
+map.on('click', function(e){
+   map.setView([-0.6780722822264619, 34.77280655443099], 19);
+   marker.bindPopup("Kisii printers solution").openPopup();
+   });
+
+   //slider
+   const slider=document.querySelector('.review__carousel--slider');
+const prev=document.querySelector('.prev');
+const next=document.querySelector('.next');
+const sections = document.querySelectorAll('.review__carousel--slider section')
+const carousel = document.querySelector('.review__carousel');
+
+
+// next.addEventListener('click', function(){
+//     slider.style.transform = 'translate(-20%)'
+// });
+
+let direction;
+
+slider.style.width = `${slider.children.length * 100}%`
+sections.forEach(el => {
+
+   el.style.width = `${100 / slider.children.length}%`;
+   el.style.flexBasis = `${100 / slider.children.length}%`;
+   
+});
+
+slider.addEventListener('transitionend', function() {
+
+   if(direction == -1 ){
+      slider.appendChild(slider.firstElementChild);
+   }else if (direction == 1){
+      slider.prepend(slider.lastElementChild);
+   }
+      slider.style.transition='none';
+      slider.style .transform='translate(0)';
+
+      setTimeout(function() {
+               slider.style.transition='all 2s';
+            }
+
+      )
+   }
+
+);
+
+
+
+
+let autoSlide = setInterval(function() {
+      direction = -1;
+      slider.style.transform=`translate(-${100 / slider.children.length}%)`
+      carousel.style.justifyContent = 'flex-start';
+   }
+
+   , 7000)
+
+   next.addEventListener('click', function(){
+      if(direction == 1){
+         slider.prepend(slider.lastElementChild);
+         direction = -1;
+      }
+      slider.style.transform = `translate(-${100 / slider.children.length}%)`;
+      carousel.style.justifyContent = 'flex-start';
+
+      clearInterval(autoSlide);
+      
+
+   })
+
+   prev.addEventListener('click', function(){
+      if(direction == -1){
+         slider.appendChild(slider.firstElementChild);
+         direction = 1;
+      }
+      direction = 1;
+      slider.style.transform = `translate(${100 / slider.children.length}%)`;
+      carousel.style.justifyContent = 'flex-end';
+
+      clearInterval(autoSlide);
+   })

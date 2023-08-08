@@ -319,3 +319,11 @@
   .product-image{
     max-width: 32rem;
 }
+
+.popupCustom .leaflet-popup-tip,
+.popupCustom .leaflet-popup-content-wrapper {
+    background: $color-cyan;
+    color: $color-white;
+    font-size:1.6rem;
+    line-height:2.4rem;
+}

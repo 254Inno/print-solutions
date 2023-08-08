@@ -377,6 +377,29 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative; }
+  .review__carousel {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden; }
+    .review__carousel--slider {
+      display: flex;
+      height: 100%;
+      width: 500%;
+      flex-shrink: 0;
+      transition: all 2s; }
+      .review__carousel--slider section {
+        flex-basis: 20%;
+        width: 20%;
+        flex-shrink: 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
   .review__h2 {
     color: #22ACE2;
     display: flex;
@@ -427,16 +450,16 @@ body {
       fill: #f4ed2765;
       height: 7rem;
       width: 7rem;
-      margin: 0 2rem; }
+      margin: 0 2rem;
+      cursor: pointer; }
       .review__control--icon:hover {
         fill: #ea098c85;
         scale: 105%;
         transition: all .9s; }
 
-.map__image {
+.map {
   width: 100%;
-  min-height: 56.6rem;
-  object-fit: cover; }
+  min-height: 56.6rem; }
 
 .footer {
   padding-top: 8rem;
@@ -922,3 +945,10 @@ body {
 
 .product-image {
   max-width: 32rem; }
+
+.popupCustom .leaflet-popup-tip,
+.popupCustom .leaflet-popup-content-wrapper {
+  background: #22ACE2;
+  color: #ffffff;
+  font-size: 1.6rem;
+  line-height: 2.4rem; }

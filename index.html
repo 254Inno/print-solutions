@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+   
     <link rel="shortcut icon" type="image/png" href="IMG/favicon.ico" />
     <title>Print Solutions Kisii</title>
 </head>
@@ -329,28 +331,77 @@
         <div class="container">
             <h2 class="review__h2 h2">
                 HEAR FROM OUR CLIENTS
-                <!-- <span></span> -->
+                
             </h2>
-            <img src="IMG/team1.jpg" alt="profile of a young casual man" class="review__image">
-            <p class="review__msg">
-                I recently discovered print solutions while searching for a roll up banner. Not only
-                did they have the item I was looking for, but their selection was vast, and the prices
-                were competitive. The website was easy to navigate, and the product descriptions
-                were informative and accurate. I was pleasantly surprised by the fast shipping and
-                the care they took in packaging my order. I'm thrilled with my purchase and will
-                continue to print with print solutions for all my printing needs. 
-            </p>
-            <p class="review__name">
-                Odhiambo Gwandoya
-                <p class="review__name--title">
-                    Customer, Homabay
-                </p>
-            </p>
+                <div class="review__carousel">
+                    <div class="review__carousel--slider">
+                        <section>
+                            <img src="IMG/team1.jpg" alt="profile of a young casual man" class="review__image">
+                            <p class="review__msg">
+                                I recently discovered print solutions while searching for a roll up banner. Not only did they have the item I was looking for, but their selection was vast, and the prices were competitive. I was pleasantly surprised by the fast shipping and the care they took in packaging my order. I'm thrilled with my purchase and will continue to print with print solutions for all my printing needs. 
+                            </p>
+                            <p class="review__name">
+                                Peter Getui
+                                <p class="review__name--title">
+                                    Customer, Homabay
+                                </p>
+                            </p>
+                        </section>
+                        <section>
+                            <img src="IMG/review-3.jpg" alt="profile of a young casual man" class="review__image">
+                            <p class="review__msg">
+                                I recently had the pleasure of working with Printing solution for a significant printing project, and I am absolutely thrilled with the results. From start to finish, their commitment to delivering top-notch quality and outstanding service was evident, making them a standout choice in the printing industry. 
+                            </p>
+                            <p class="review__name">
+                                Christin Kemunto
+                                <p class="review__name--title">
+                                    Business Woman, Kisii
+                                </p>
+                            </p>
+                        </section>
+                        <section>
+                            <img src="IMG/review-1.png" alt="profile of a young casual man" class="review__image">
+                            <p class="review__msg">
+                                Meeting deadlines is crucial in any project, and Printing solution demonstrated their reliability by delivering the printed materials right on schedule. They managed the production timeline efficiently without compromising on quality, which is a rare combination in the industry. 
+                            </p>
+                            <p class="review__name">
+                                Nyabuto 
+                                <p class="review__name--title">
+                                    Engineer
+                                </p>
+                            </p>
+                        </section>
+                        <section>
+                            <img src="IMG/review-2.png" alt="profile of a young casual man" class="review__image">
+                            <p class="review__msg">
+                                The quality of the printed materials exceeded my expectations. The colors were vibrant, the text was sharp and clear, and the overall attention to detail was impeccable. Whether it was a large banner or intricate brochures, Printing solution consistently maintained their high standards of quality
+                            </p>
+                            <p class="review__name">
+                                Duncan Obiero
+                                <p class="review__name--title">
+                                    Engineer KeRRA
+                                </p>
+                            </p>
+                        </section>
+                        <section>
+                            <img src="IMG/review-4.jpg" alt="profile of a young casual man" class="review__image">
+                            <p class="review__msg">
+                                I recently had the pleasure of working with printing solution for both their printing and designing services, and I am absolutely thrilled with the experience. From start to finish, they exhibited a level of professionalism, creativity, and attention to detail that truly sets them apart in the industry.
+                            </p>
+                            <p class="review__name">
+                                Kwamboka Ruth
+                                <p class="review__name--title">
+                                    Customer, Kisii
+                                </p>
+                            </p>
+                        </section>
+                    </div>
+                </div>
             <div class="review__control">
-                <svg class="review__control--icon">
+                <svg class="review__control--icon prev">
                     <use xlink:href="sprite.svg#left"></use>
                 </svg>
-                <svg class="review__control--icon">
+                <svg class="review__control--icon next">
                     <use xlink:href="sprite.svg#right"></use>
                 </svg>
             </div>
@@ -364,8 +415,8 @@
 
 
 
-    <div class="map" id="map">
-        <img src="IMG/MAP.png" alt="print solution location map" class="map__image">
+    <div class="map custom-popup popupCustom" id="map">
+        <!-- <img src="IMG/MAP.png" alt="print solution location map" class="map__image"> -->
     </div>
 
 
@@ -542,6 +593,7 @@
     </div>
 
     </div> -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="JS/script.js"></script>
 </body>
 
